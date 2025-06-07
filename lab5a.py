@@ -25,7 +25,7 @@ def read_file_list(file_name):
     f = open(file_name,'r')
     contents = f.readlines()
     f.close()
-    print(contents)
+    # print(contents)
     list_content = []
     for item in contents:
         list_content.append(item.strip())
