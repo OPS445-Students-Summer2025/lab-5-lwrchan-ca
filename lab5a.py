@@ -22,15 +22,35 @@ def read_file_string(file_name):
 def read_file_list(file_name):
     # Takes a file_name as string for a file name, 
     # return its entire contents as a list of lines without new-line characters
+#____________________________________________________________________________________________________
+#USING FOR LOOP:
+    # f = open(file_name,'r')
+    # contents = f.readlines()
+    # f.close()
+    # # print(contents)
+    # list_content = []
+    # for item in contents:
+    #     list_content.append(item.strip())
+    # return list_content
+ 
+#_____________________________________________________________________________________________________
+#USING LIST:
     f = open(file_name,'r')
-    contents = f.readlines()
+    contents = f.read()
     f.close()
     # print(contents)
-    list_content = []
-    for item in contents:
-        list_content.append(item.strip())
-    return list_content
- 
+    list_contents = contents.split('\n')
+    # print(list_contents)
+    # list_content = []
+    # for item in contents:
+    #     list_content.append(item.strip())
+    length = int(len(list_contents))
+    last = int(length) - 1
+    # print (length)
+    list_contents_no_last = []
+    list_contents_no_last = list_contents[0:last]
+    # print (list_contents_no_last)
+    return list_contents_no_last
 
 
 if __name__ == '__main__':
