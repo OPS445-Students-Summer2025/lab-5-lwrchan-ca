@@ -59,17 +59,16 @@ def copy_file_add_line_numbers(file_name_read, file_name_write):
 
     original_list = read_file_list(file_name_read)
     # print (original_list)
-    f = open(file_name_write, 'w')
+    f = open(file_name_write, 'w')  #to empty the file_name_write before it starts appending in the below codes
     f.close()
     f = open(file_name_write, 'a')
     count = 0
     for line in original_list:
-        line_item = original_list[count]
-        f.write(str(count+1)+":"+ line_item+"\n")
+        # line_item = original_list[count]
+        # f.write(str(count+1)+":"+ line_item+"\n")
+        f.write(str(count+1) + ":"+ line + "\n")
         count = count + 1
     f.close()
-
-   
 
 
 
